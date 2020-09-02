@@ -1,17 +1,22 @@
 import React, { useState } from "react";
+import "./Counter.css";
 
 function Counter() {
-  const [value, setValue] = useState(0);
+  const [count, setCount] = useState(0);
 
   return (
     <div>
-      <span>좋아요 {value}개</span>
-      <button onClick={() => setValue(value + 1)}>
-        <span>❤️</span>
+      <button className="heart__button" onClick={() => setCount(count + 1)}>
+        <span className="heart__emoji">
+          <span>❤️</span>
+        </span>
       </button>
-      <button onClick={() => setValue(value - 1)}>
-        <span>🤍</span>
+      <button className="heart__button" onClick={() => setCount(count - 1)}>
+        <span className="heart__emoji">
+          <span>🤍</span>
+        </span>
       </button>
+      <span className="heart__text">좋아요 {count}개</span>
     </div>
   );
 }

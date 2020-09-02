@@ -1,0 +1,33 @@
+.rating__text {
+  margin-top: 30px;
+  color: #2c2c2c;
+}
+
+.rating__input {
+  background-color: white;
+  margin: 10px 10px 10px 0px;
+  font-weight: 300;
+  padding: 10px;
+  border: 0px solid black;
+  border-radius: 5px;
+  color: #adaeb9;
+  box-shadow: 0 5px 5px -1px rgba(50, 50, 93, 0.25),
+    0 2px 3px -2px rgba(0, 0, 0, 0.3), 0 -6px 16px -6px rgba(0, 0, 0, 0.025);
+}
+
+.rating__input::placeholder {
+  color: #adaeb9;
+}
+
+.rating__button {
+  background-color: white;
+  margin: 10px 10px 10px 0px;
+  font-weight: 300;
+  padding: 10px;
+  margin-right: 4px;
+  border: 0px solid #adaeb9;
+  border-radius: 5px;
+  color: #adaeb9;
+  box-shadow: 0 5px 5px -1px rgba(50, 50, 93, 0.25),
+    0 2px 3px -2px rgba(0, 0, 0, 0.3), 0 -6px 16px -6px rgba(0, 0, 0, 0.025);
+}

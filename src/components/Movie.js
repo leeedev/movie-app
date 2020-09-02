@@ -2,9 +2,10 @@ import React from "react";
 import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
 import Counter from "./Counter";
+import Rating from "./Rating";
 import "./Movie.css";
 
-function Movie({ id, year, title, summary, poster, genres }) {
+function Movie({ id, year, title, summary, poster, genres, rating }) {
   return (
     <div className="movie">
       <Link
@@ -16,6 +17,7 @@ function Movie({ id, year, title, summary, poster, genres }) {
             summary,
             poster,
             genres,
+            rating,
           },
         }}
       >
@@ -23,6 +25,9 @@ function Movie({ id, year, title, summary, poster, genres }) {
         <div className="movie__data">
           <h3 className="movie__title">{title}</h3>
           <h5 className="movie__year">{year}</h5>
+          <h5 className="movie__rating">
+            <span role="img">⭐</span> {rating}
+          </h5>
           <ul className="movie__genres">
             {genres.map((genre, index) => (
               <li key={index} className="genres__genre">
@@ -34,6 +39,7 @@ function Movie({ id, year, title, summary, poster, genres }) {
         </div>
       </Link>
       <Counter />
+      <Rating />
     </div>
   );
 }

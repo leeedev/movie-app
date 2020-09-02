@@ -27,7 +27,7 @@ class Home extends React.Component {
       <section className="container">
         {isLoading ? (
           <div className="loader">
-            <h3 className="loader__text">Loading...</h3>
+            <span className="loader__text">Loading...</span>
           </div>
         ) : (
           <div className="movies">
@@ -40,6 +40,7 @@ class Home extends React.Component {
                 summary={movie.summary}
                 poster={movie.medium_cover_image}
                 genres={movie.genres}
+                rating={movie.rating}
               />
             ))}
           </div>
